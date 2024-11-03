@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { FaBars, FaPhoneAlt } from "react-icons/fa";
-import logo from '../images/logo.jpeg'
+import logo from '../images/brand/logo.jpeg'
 
 const Header = () => {
   const isMobile =
