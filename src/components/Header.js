@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { FaBars, FaPhoneAlt } from "react-icons/fa";
+import logo from '../images/logo.jpeg'
 
 const Header = () => {
   const isMobile =
@@ -10,8 +11,9 @@ const Header = () => {
   return (
     <div className="flex justify-between bg-[#e2e8f0] px-4 pt-2 pb-1">
       <div className="flex">
-        <img
-          src="/assets/brand/logo.jpeg"
+        <Image
+          // src="/assets/brand/logo.jpeg"
+          src={logo}
           alt="logo"
           width={60}
           height={45}
