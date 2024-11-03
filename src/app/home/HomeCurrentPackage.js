@@ -2,6 +2,11 @@
 import Image from "next/image";
 import React from "react";
 import { FaAngleDoubleRight } from "react-icons/fa";
+import package1 from '../../images/packages/package1.jpeg'
+import package2 from '../../images/packages/package2.jpeg'
+import package3 from '../../images/packages/package3.jpeg'
+import package4 from '../../images/packages/package4.jpeg'
+
 
 const HomeCurrentPackage = () => {
   const isMobile = typeof window !== "undefined" &&
@@ -16,29 +21,29 @@ const HomeCurrentPackage = () => {
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <Image
-          src="/assets/packages/package1.jpeg"
-          alt=""
+          src={package1}
+          alt="package"
           width={300}
           height={350}
           className="package-image"
         />
         <Image
-          src="/assets/packages/package2.jpeg"
-          alt=""
+          src={package2}
+          alt="package"
           width={300}
           height={350}
           className="package-image"
         />
         <Image
-          src="/assets/packages/package3.jpeg"
-          alt=""
+          src={package3}
+          alt="package"
           width={300}
           height={350}
           className="package-image"
         />
         <Image
-          src="/assets/packages/package4.jpeg"
-          alt=""
+          src={package4}
+          alt="package"
           width={300}
           height={350}
           className="package-image"

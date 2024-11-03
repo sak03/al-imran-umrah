@@ -2,6 +2,11 @@
 import Image from "next/image";
 import React from "react";
 import { FaAngleDoubleRight } from "react-icons/fa";
+import offer1 from '../../images/offers/offer1.jpeg'
+import offer2 from '../../images/offers/offer2.jpeg'
+import offer3 from '../../images/offers/offer1.jpeg'
+import offer4 from '../../images/offers/offer2.jpeg'
+
 
 const HomeOffers = () => {
   const isMobile = typeof window !== "undefined" &&
@@ -16,26 +21,26 @@ const HomeOffers = () => {
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <Image
-          src="/assets/offers/offer1.jpeg"
-          alt=""
+          src={offer1}
+          alt="offer"
           width={300}
           height={350}
         />
         <Image
-          src="/assets/offers/offer2.jpeg"
-          alt=""
+          src={offer2}
+          alt="offer"
           width={300}
           height={350}
         />
         <Image
-          src="/assets/offers/offer1.jpeg"
-          alt=""
+          src={offer3}
+          alt="offer"
           width={300}
           height={350}
         />
         <Image
-          src="/assets/offers/offer2.jpeg"
-          alt=""
+          src={offer4}
+          alt="offer"
           width={300}
           height={350}
         />
