@@ -17,7 +17,7 @@ const Header = () => {
           height={45}
           className="rounded-full app-logo"
         />{" "}
-        <div className="mx-3">
+        <div className="mx-3 text-black">
           <p className="text-2xl mb-0">Al-Imran</p>
           <span
             className="text-[13px]"
@@ -34,21 +34,21 @@ const Header = () => {
           <span className="text-xl text-[#28859c] font-bold hover:text-[#28859c] cursor-pointer">
             Home
           </span>
-          <span className="mx-5 text-xl hover:text-[#28859c] cursor-pointer">
+          <span className="mx-5 text-xl text-black hover:text-[#28859c] cursor-pointer">
             Packages
           </span>
-          <span className="text-xl hover:text-[#28859c] cursor-pointer">
+            <span className="text-xl text-black hover:text-[#28859c] cursor-pointer">
             Offers
           </span>
-          <span className="mx-5 text-xl text-xl hover:text-[#28859c] cursor-pointer">
+            <span className="mx-5 text-xl text-black text-xl hover:text-[#28859c] cursor-pointer">
             About
           </span>
-          <span className="text-xl hover:text-[#28859c] cursor-pointer">
+            <span className="text-xl text-black hover:text-[#28859c] cursor-pointer">
             Contact
           </span>
         </div>
       )}
-      <div className="mt-3 flex cursor-pointer">
+      <div className="mt-3 flex text-black cursor-pointer">
         <div className=" mt-1">
           <FaPhoneAlt />
         </div>
