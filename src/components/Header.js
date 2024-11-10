@@ -22,10 +22,10 @@ const Header = () => {
         <div className="mx-3 text-black">
           <p className="text-2xl mb-0">Al-Imran</p>
           <span
-            className="text-[13px]"
+            className="text-[14px]"
             style={{ position: "relative", top: "-10px" }}
           >
-            Tours & Travels
+            Umrah Tours
           </span>
         </div>
       </div>

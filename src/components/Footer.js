@@ -23,14 +23,17 @@ const Footer = () => {
     >
       <div>
         <div className="text-2xl">Company</div>
-        <div className="mt-2">Al Imran Tours & Travels Pvt. Ltd.</div>
-        <div className="">Zakir Nagar, Okhla Phase - II,</div>
-        <div className="">New Delhi, 110025</div>
+        <div className="mt-2">Al Imran Umrah Tours</div>
+        <div className="">70/2, Gali No. 20, Zakir Nagar,</div>
+        <div className=""> Okhla, New Delhi, 110025</div>
         <div className="flex">
-          <FaEnvelope /> <span className="mx-2">info@alimrantours.com</span>
+          <FaEnvelope /> <span className="mx-2">alimranumrahtour82@gmail.com</span>
         </div>
         <div className="flex">
-          <FaPhoneAlt /> <span className="mx-2">+91 99999 99999</span>
+          <FaPhoneAlt /> <span className="mx-2">+91 85950 60228</span>
+        </div>
+        <div className="flex">
+          <FaPhoneAlt /> <span className="mx-2">+91 98912 30612</span>
         </div>
       </div>
       <div className={isMobile ? "my-3" : ""}>
@@ -39,15 +42,17 @@ const Footer = () => {
         <div className="">FAQ's</div>
         <div className="">Contact Us</div>
         <div className="flex mt-1 text-xl">
-          <FaFacebookSquare />{" "}
+          <a href="https://www.facebook.com/hunt.adda?mibextid=ZbWKwL" target="_blank">
+            <FaFacebookSquare /></a>{" "}
           <span className="mx-2">
-            <FaInstagram />
+            <a href="https://www.instagram.com/al_imran_umrah?igsh=YTV5YWU3c2MzcnNr" target="_blank">
+              <FaInstagram /></a>
           </span>{" "}
-          <FaYoutube />{" "}
+          {/* <FaYoutube />{" "}
           <span className="mx-2">
             <FaTwitter />
           </span>
-          <FaLinkedin />
+          <FaLinkedin /> */}
         </div>
       </div>
       <div>

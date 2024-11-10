@@ -16,7 +16,7 @@ const HomePackageClasses = () => {
     <div
       className={`${isMobile ? "px-2" : "px-[5rem]"} py-5 my-5 bg-slate-200`}
     >
-      <div className="flex justify-between my-2">
+      <div className="flex justify-between my-2 text-black">
         <span className="text-2xl">Special Packages</span>
         <span className="flex cursor-pointer">
           See All <FaAngleDoubleRight className="mt-1 mx-1" />
