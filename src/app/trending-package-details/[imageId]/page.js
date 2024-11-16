@@ -1,31 +1,14 @@
-"use client"
-import React, { useState, useEffect } from 'react'
+// "use client"
 import { trendingDatas } from "@/utils/app-datas/trendingData"
 import Image from 'next/image';
 
-const TrendingPackageDetails = ({ params }) => {
-    const { imageId } = params; // Destructure params directly
-    const [isMobile, setIsMobile] = useState(false);
 
-    useEffect(() => {
-        // Update `isMobile` only on the client
-        const checkIsMobile = () =>
-            window.matchMedia("(max-width: 575px)").matches;
-        setIsMobile(checkIsMobile);
-
-        // Add listener for viewport changes
-        const mediaQuery = window.matchMedia("(max-width: 575px)");
-        mediaQuery.addEventListener("change", (e) => setIsMobile(e.matches));
-
-        return () => {
-            mediaQuery.removeEventListener("change", (e) => setIsMobile(e.matches));
-        };
-    }, []);
-
+const TrendingPackageDetails = async ({ params }) => {
+    const imageId = (await params).imageId
     const filteredImage = trendingDatas.filter((item) => item.id === imageId);
 
     return (
-        <div className={`${isMobile ? "px-3" : "px-[5rem]"} my-5`}>
+        <div className="trending-details-body">
             <div className="flex justify-between my-2">
                 <span className="text-2xl">Trending Packages Details</span>
             </div>

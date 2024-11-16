@@ -37,6 +37,11 @@ body {
   height: auto;
 }
 
+.trending-details-body {
+  padding: 0 5rem;
+  margin: 2rem 0;
+}
+
 
 /* banners style end */
 
@@ -48,5 +53,8 @@ body {
   .package-detail-image{
     width: 95vw;
       height: auto;
+  }
+  .trending-details-body{
+    padding: 0 1.5rem;
   }
 }
