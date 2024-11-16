@@ -1,10 +1,16 @@
-// "use client"
 import { trendingDatas } from "@/utils/app-datas/trendingData"
 import Image from 'next/image';
+
+export async function generateStaticParams() {
+    return trendingDatas.map((item) => ({
+        imageId: item.id,
+    }));
+}
 
 
 const TrendingPackageDetails = async ({ params }) => {
     const imageId = (await params).imageId
+    // const { imageId } = params;
     const filteredImage = trendingDatas.filter((item) => item.id === imageId);
 
     return (
