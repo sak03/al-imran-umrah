@@ -1,26 +1,37 @@
 "use client"
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { trendingDatas } from "@/utils/app-datas/trendingData"
 import Image from 'next/image';
 
 const TrendingPackageDetails = ({ params }) => {
-    const resolvedParams = React.use(params);
-    const { imageId } = resolvedParams;
-    const isMobile = typeof window !== "undefined" &&
-        window.matchMedia("(max-width: 575px)").matches;
-    const filterdImage = trendingDatas.filter((item) => {
-        return item.id === imageId
-    })
-    // const { imageId } = params
-    // console.log('imageId', imageId, filterdImage)
+    const { imageId } = params; // Destructure params directly
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        // Update `isMobile` only on the client
+        const checkIsMobile = () =>
+            window.matchMedia("(max-width: 575px)").matches;
+        setIsMobile(checkIsMobile);
+
+        // Add listener for viewport changes
+        const mediaQuery = window.matchMedia("(max-width: 575px)");
+        mediaQuery.addEventListener("change", (e) => setIsMobile(e.matches));
+
+        return () => {
+            mediaQuery.removeEventListener("change", (e) => setIsMobile(e.matches));
+        };
+    }, []);
+
+    const filteredImage = trendingDatas.filter((item) => item.id === imageId);
+
     return (
         <div className={`${isMobile ? "px-3" : "px-[5rem]"} my-5`}>
             <div className="flex justify-between my-2">
                 <span className="text-2xl">Trending Packages Details</span>
             </div>
             <div className="grid grid-cols-1 gap-4">
-                {filterdImage.map((item, idx) => {
-                    return (
+                {filteredImage.length > 0 ? (
+                    filteredImage.map((item, idx) => (
                         <Image
                             key={idx}
                             src={item.imgUrl}
@@ -29,8 +40,10 @@ const TrendingPackageDetails = ({ params }) => {
                             height={350}
                             className="package-detail-image"
                         />
-                    )
-                })}
+                    ))
+                ) : (
+                    <p>No matching data found for this package.</p>
+                )}
             </div>
         </div>
     )

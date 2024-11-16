@@ -12,26 +12,27 @@ const Header = () => {
     window.matchMedia("(max-width: 575px)").matches;
   return (
     <div className="flex justify-between bg-[#e2e8f0] px-4 pt-2 pb-1">
-      <div className="flex">
-        <Link href="/"> 
-        <Image
-          // src="/assets/brand/logo.jpeg"
-          src={logo}
-          alt="logo"
-          width={60}
-          height={45}
-          className="rounded-full app-logo"
-          /></Link>{" "}
-        <div className="mx-3 text-black">
-          <p className="text-2xl mb-0">Al-Imran</p>
-          <span
-            className="text-[14px]"
-            style={{ position: "relative", top: "-10px" }}
-          >
-            Umrah Tours
-          </span>
+      <Link href="/">
+        <div className="flex">
+          <Image
+            // src="/assets/brand/logo.jpeg"
+            src={logo}
+            alt="logo"
+            width={60}
+            height={45}
+            className="rounded-full app-logo"
+          />{" "}
+          <div className="mx-3 text-black">
+            <p className="text-2xl mb-0">Al-Imran</p>
+            <span
+              className="text-[14px]"
+              style={{ position: "relative", top: "-10px" }}
+            >
+              Umrah Tours
+            </span>
+          </div>
         </div>
-      </div>
+      </Link>
       {isMobile ? (
         ""
       ) : (
@@ -42,13 +43,13 @@ const Header = () => {
           <span className="mx-5 text-xl text-black hover:text-[#28859c] cursor-pointer">
             Packages
           </span>
-            <span className="text-xl text-black hover:text-[#28859c] cursor-pointer">
+          <span className="text-xl text-black hover:text-[#28859c] cursor-pointer">
             Offers
           </span>
-            <span className="mx-5 text-xl text-black text-xl hover:text-[#28859c] cursor-pointer">
+          <span className="mx-5 text-xl text-black text-xl hover:text-[#28859c] cursor-pointer">
             About
           </span>
-            <span className="text-xl text-black hover:text-[#28859c] cursor-pointer">
+          <span className="text-xl text-black hover:text-[#28859c] cursor-pointer">
             Contact
           </span>
         </div>
@@ -57,7 +58,7 @@ const Header = () => {
         <div className=" mt-1">
           <FaPhoneAlt />
         </div>
-        <div className="text-xl mx-2">{isMobile ? <FaBars /> : "Book an appointment" }</div>
+        <div className="text-xl mx-2">{isMobile ? <FaBars /> : "Book an appointment"}</div>
       </div>
     </div>
   );

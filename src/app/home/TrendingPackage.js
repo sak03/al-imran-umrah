@@ -4,9 +4,11 @@ import React from "react";
 import { FaAngleDoubleRight } from "react-icons/fa";
 import { trendingDatas } from "@/utils/app-datas/trendingData"
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 
 const TrendingPackage = () => {
+  const router = useRouter()
   const isMobile = typeof window !== "undefined" &&
     window.matchMedia("(max-width: 575px)").matches;
   return (
@@ -29,6 +31,7 @@ const TrendingPackage = () => {
               width={300}
               height={350}
               className="package-image"
+              onClick={() => router.push(`/trending-package-details/${item.id}`)}
             />
           )
         }) }
