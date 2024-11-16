@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React from "react";
 import {
   FaEnvelope,
@@ -38,7 +39,7 @@ const Footer = () => {
       </div>
       <div className={isMobile ? "my-3" : ""}>
         <div className="text-2xl">Important Links</div>
-        <div className="mt-2">About Us</div>
+        <div className="mt-2"><Link href="/about-us"> About Us</Link></div>
         <div className="">FAQ's</div>
         <div className="">Contact Us</div>
         <div className="flex mt-1 text-xl">

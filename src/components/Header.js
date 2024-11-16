@@ -3,6 +3,8 @@ import Image from "next/image";
 import React from "react";
 import { FaBars, FaPhoneAlt } from "react-icons/fa";
 import logo from '../images/brand/logo.jpeg'
+import Link from "next/link";
+
 
 const Header = () => {
   const isMobile =
@@ -11,6 +13,7 @@ const Header = () => {
   return (
     <div className="flex justify-between bg-[#e2e8f0] px-4 pt-2 pb-1">
       <div className="flex">
+        <Link href="/"> 
         <Image
           // src="/assets/brand/logo.jpeg"
           src={logo}
@@ -18,7 +21,7 @@ const Header = () => {
           width={60}
           height={45}
           className="rounded-full app-logo"
-        />{" "}
+          /></Link>{" "}
         <div className="mx-3 text-black">
           <p className="text-2xl mb-0">Al-Imran</p>
           <span
