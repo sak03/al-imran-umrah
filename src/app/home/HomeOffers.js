@@ -6,6 +6,7 @@ import offer1 from '../../images/offers/offer1.jpeg'
 import offer2 from '../../images/offers/offer2.jpeg'
 import offer3 from '../../images/offers/offer1.jpeg'
 import offer4 from '../../images/offers/offer2.jpeg'
+import { offerData } from "@/utils/app-datas/offerDatas"
 
 
 const HomeOffers = () => {
@@ -20,13 +21,18 @@ const HomeOffers = () => {
         </span>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <Image
-          src={offer1}
-          alt="offer"
-          width={300}
-          height={350}
-        />
-        <Image
+        {offerData.map((item, idx)=>{
+          return(
+            <Image
+            key={idx}
+              src={item.imgUrl}
+              alt={item.name}
+              width={300}
+              height={350}
+            />
+          )
+        })}
+        {/* <Image
           src={offer2}
           alt="offer"
           width={300}
@@ -37,13 +43,13 @@ const HomeOffers = () => {
           alt="offer"
           width={300}
           height={350}
-        />
-        <Image
+        /> */}
+        {/* <Image
           src={offer4}
           alt="offer"
           width={300}
           height={350}
-        />
+        /> */}
       </div>
     </div>
   );
