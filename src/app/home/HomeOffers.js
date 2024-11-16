@@ -32,24 +32,6 @@ const HomeOffers = () => {
             />
           )
         })}
-        {/* <Image
-          src={offer2}
-          alt="offer"
-          width={300}
-          height={350}
-        />
-        <Image
-          src={offer3}
-          alt="offer"
-          width={300}
-          height={350}
-        /> */}
-        {/* <Image
-          src={offer4}
-          alt="offer"
-          width={300}
-          height={350}
-        /> */}
       </div>
     </div>
   );

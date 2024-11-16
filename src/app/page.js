@@ -1,5 +1,5 @@
 import Banners from "./home/Banners";
-import HomeCurrentPackage from "./home/HomeCurrentPackage";
+import TrendingPackage from "./home/TrendingPackage";
 import HomeOffers from "./home/HomeOffers";
 import HomePackageClasses from "./home/HomePackageClasses";
 
@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <Banners />
-      <HomeCurrentPackage />
+      <TrendingPackage />
       <HomePackageClasses />
       <HomeOffers />
     </div>
