@@ -1,25 +1,24 @@
-import { trendingDatas } from "@/utils/app-datas/trendingData"
+import { offerData } from "@/utils/app-datas/offerDatas"
 import Image from 'next/image';
 
 export async function generateStaticParams() {
-    return trendingDatas.map((item) => ({
-        imageId: item.id,
+    return offerData.map((item) => ({
+        offerId: item.id,
     }));
 }
 
-
-const TrendingPackageDetails = async ({ params }) => {
-    const imageId = (await params).imageId
-    const filteredImage = trendingDatas.filter((item) => item.id === imageId);
-
+const page = async ({ params }) => {
+    const offerId = (await params).offerId
+    const filteredOffer = offerData.filter((item) => item.id === offerId);
+    
     return (
         <div className="trending-details-body">
             <div className="flex justify-between my-2">
-                <span className="text-2xl">Trending Packages Details</span>
+                <span className="text-2xl">Special Offer Details</span>
             </div>
             <div className="grid grid-cols-1 gap-4">
-                {filteredImage.length > 0 ? (
-                    filteredImage.map((item, idx) => (
+                {filteredOffer.length > 0 ? (
+                    filteredOffer.map((item, idx) => (
                         <Image
                             key={idx}
                             src={item.imgUrl}
@@ -30,11 +29,11 @@ const TrendingPackageDetails = async ({ params }) => {
                         />
                     ))
                 ) : (
-                    <p>No matching data found for this package.</p>
+                    <p>No matching data found for this offer.</p>
                 )}
             </div>
         </div>
     )
 }
 
-export default TrendingPackageDetails
+export default page

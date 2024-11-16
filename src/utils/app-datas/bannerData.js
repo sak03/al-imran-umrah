@@ -1,11 +1,11 @@
 import bnr1 from '../../images/banners/banner1.jpeg'
-import bnr2 from '../../images/banners/banner1.jpeg'
+import bnr2 from '../../images/banners/banner2.jpeg'
 import bnr3 from '../../images/banners/bnr1.jpg'
-import bnr4 from '../../images/banners/bnr1.jpg'
-import bnr5 from '../../images/banners/bnr1.jpg'
-import bnr6 from '../../images/banners/bnr1.jpg'
-import bnr7 from '../../images/banners/bnr1.jpg'
-import bnr8 from '../../images/banners/bnr1.jpg'
+import bnr4 from '../../images/banners/bnr2.jpg'
+import bnr5 from '../../images/banners/bnr3.jpg'
+import bnr6 from '../../images/banners/bnr4.jpg'
+import bnr7 from '../../images/banners/bnr5.jpg'
+import bnr8 from '../../images/banners/bnr6.jpg'
 
 
 export const bannerData = [
