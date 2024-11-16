@@ -2,7 +2,7 @@
 const nextConfig = {
   // reactStrictMode: true,
   // output:'export',
-  images: { unoptimized: true },
+  // images: { unoptimized: true },
   // basePath: '/al-imran-umrah',
   // assetPrefix: '/al-imran-umrah',
   // images: {
